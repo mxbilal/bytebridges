@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import viteLogo from "../assets/logo.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const HeaderPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
