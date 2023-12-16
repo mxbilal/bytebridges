@@ -1,0 +1,61 @@
+#root{
+  width: 100%;
+  background-color: #dcefff;
+}
+.logo {
+  /* will-change: filter; */  
+  transition: 1s;
+  
+  &:hover{
+    animation: bounce 3s ease infinite; 
+  }
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+
+@keyframes slowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowFadeInDelayed {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slow-fade-in {
+  animation: slowFadeIn 1s ease forwards;
+}
+
+.animate-slow-fade-in.delay-500 {
+  animation: slowFadeInDelayed 1s ease 0.5s forwards;
+}
