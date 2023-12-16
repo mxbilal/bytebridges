@@ -66,7 +66,7 @@ const ServicesPage = () => {
 
   return (
     <div className="bg-blue-100 py-2">
-      <p className="text-4xl font-bold text-center">
+      <p className=" md:text-4xl font-bold text-center">
         Solutions tailored to your business
       </p>
       <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

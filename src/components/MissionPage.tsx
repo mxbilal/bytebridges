@@ -1,11 +1,11 @@
 import missionImg from "../assets/mission.jpg";
 const MissionPage = () => {
   return (
-    <div className="p-8  text-center flex items-center gap-4">
-      <div className="w-1/2 ">
+    <div className="p-8 text-center flex items-center gap-4 flex-col md:flex-row">
+      <div className="  md:w-1/2 ">
         <img src={missionImg} className="w-full" />
       </div>
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2">
         {" "}
         <h2 className="text-4xl font-bold mb-4 animate-slow-fade-in">
           Our Mission
