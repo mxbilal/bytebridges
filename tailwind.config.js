@@ -3,12 +3,16 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        readax_pro: "Readex Pro",
+      },
       backgroundColor: {
         primary: "#07689F",
         on_hover: "#085a88",
       },
       colors: {
         primary: "#07689F",
+        light_black: "#444",
       },
       screens: {
         // You may want to adjust these breakpoints as needed

@@ -1,40 +1,59 @@
-function Footer() {
+import { Link } from "react-router-dom";
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col items-center sm:flex-row sm:justify-between">
-        <div className="mb-6 sm:mb-0">
-          <a
-            href="/"
-            className="text-xl font-bold text-gray-200 hover:text-gray-100"
-          >
-            ByteBridges
-          </a>
-        </div>
-        <div className="space-y-2 sm:space-y-0 sm:flex sm:gap-4">
-          <a href="/about" className="hover:underline">
-            About Us
-          </a>
-          <a href="/services" className="hover:underline">
-            Services
-          </a>
-          <a href="/portfolio" className="hover:underline">
-            Portfolio
-          </a>
-          <a href="/careers" className="hover:underline">
-            Careers
-          </a>
-          <a href="/contact" className="hover:underline">
-            Contact Us
-          </a>
+    <footer className="bg-gray-800 text-white py-8">
+      <div className="container mx-auto px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-4">
+            <h2 className="text-lg font-bold">About ByteBridges</h2>
+            <p>
+              We are a team of experienced web developers, working together to
+              deliver exceptional digital solutions to our clients.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-lg font-bold">Quick Links</h2>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/">
+                  <a className="hover:text-gray-300">Home</a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <a className="hover:text-gray-300">Services</a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <a className="hover:text-gray-300">Projects</a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/">
+                  <a className="hover:text-gray-300">Contact</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-lg font-bold">Contact Us</h2>
+            <p>Phone: +1 23 456 7890</p>
+            <p>Email: info@bytebridges.com</p>
+            <p>Address: 123 Street, City, Country</p>
+          </div>
         </div>
       </div>
-      <div className="flex justify-center mt-6 sm:mt-10">
-        <p className="text-sm text-gray-500">
-          © 2023 ByteBridges. All Rights Reserved.
-        </p>
+
+      <div className="border-t border-gray-700 mt-6">
+        <div className="container mx-auto px-8 py-4 text-center">
+          <p>&copy; 2022 ByteBridges. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
