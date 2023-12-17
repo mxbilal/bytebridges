@@ -1,11 +1,26 @@
 @import '../colors.scss';
-header{
-    .contact-btn{
-        &:hover{
-            background-color: $primary_color;
+
+header {
+    .contact-btn {
+        background: linear-gradient($primary_color 0 0) no-repeat;
+        background-size: 0%;
+        transition: .4s;
+        &:hover {
             color: white;
-            transition: all 500ms ease;
+            background-size: 100%;
+            transition: .4s;
         }
     }
-    
+
+}
+
+.mission-btn {
+    background: linear-gradient(#1f2522 0 0) no-repeat;
+    background-size: 0%;
+    transition: .4s;
+
+    &:hover {
+        background-size: 100%;
+        transition: .4s;
+    }
 }

@@ -1,72 +1,52 @@
 import ServiceCard from "./ServiceCard";
 import reactLogo from "../assets/react.svg";
-import nodeLogo from "../assets/node.svg";
-import jsLogo from "../assets/js.svg";
-import nextLogo from "../assets/next.svg";
-import nestLogo from "../assets/nest.svg";
-import vueLogo from "../assets/vue.svg";
+// import nodeLogo from "../assets/node.svg";
+// import jsLogo from "../assets/js.svg";
+// import nextLogo from "../assets/next.svg";
+// import nestLogo from "../assets/nest.svg";
+// import vueLogo from "../assets/vue.svg";
+import cmsLogo from "../assets/cms.svg";
+import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
 import hostingLogo from "../assets/hosting.svg";
 
 const ServicesPage = () => {
   const services = [
     {
-      title: "ReactJS Development",
+      title: "CRM Applications",
+      image: crmLogo,
+      description:
+        "Tailoring custom CRM solutions to streamline your business processes, enhancing efficiency and customer relationship management.",
+    },
+    {
+      title: "Responsive Designs",
       image: reactLogo,
       description:
-        "Building dynamic and interactive user interfaces with React.",
+        "Creating websites with responsive designs that adapt seamlessly to various devices, providing an optimal user experience.",
     },
     {
-      title: "NodeJS Development",
-      image: nodeLogo,
+      title: "CMS Systems",
+      image: cmsLogo,
       description:
-        "Creating scalable and efficient server-side applications with NodeJS.",
-    },
-    {
-      title: "ExpressJS Development",
-      image: jsLogo,
-      description:
-        "Developing robust and fast web applications using ExpressJS.",
-    },
-    {
-      title: "Chatbots with Websockets",
-      image: jsLogo,
-      description:
-        "Implementing real-time communication using websockets for interactive chatbots.",
-    },
-    {
-      title: "NextJS Development",
-      image: nextLogo,
-      description:
-        "Building performant and SEO-friendly React applications with NextJS.",
-    },
-    {
-      title: "NestJS Development",
-      image: nestLogo,
-      description:
-        "Constructing scalable and modular server-side applications with NestJS.",
-    },
-    {
-      title: "VueJS Development",
-      image: vueLogo,
-      description: "Crafting dynamic and intuitive user interfaces with VueJS.",
+        "Developing Content Management Systems for easy content updates and management, empowering you to control your online content effortlessly.",
     },
     {
       title: "AWS Services Integration",
       image: awsLogo,
       description:
-        "Utilizing AWS services for cloud computing, storage, and more.",
+        "Leveraging the full potential of AWS services for cloud computing, storage, and scalable solutions tailored to your needs.",
     },
     {
       title: "Hosting Services",
       image: hostingLogo,
-      description: "Providing reliable hosting solutions for web applications.",
+      description:
+        "Providing reliable hosting solutions for web applications, ensuring high availability and security for your online presence.",
     },
   ];
 
   return (
-    <div className=" p-8 px-24">
-      <p className="text-4xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
+    <div className="md:p-8 md:px-24">
+      <p className=" p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
         Solutions tailored to your business
       </p>
       <hr className="w-1/2 border-primary m-auto" />

@@ -1,4 +1,6 @@
 import missionImg from "../assets/m.svg";
+import "./component.scss";
+
 const MissionPage = () => {
   return (
     <div className="p-8 text-center flex justify-between gap-4 flex-col-reverse md:flex-row md:px-20">
@@ -9,11 +11,13 @@ const MissionPage = () => {
         </h2>
         <hr className="border-primary" />
         <p className="text-gray-700 font-readax_pro mb-8 animate-slow-fade-in delay-500 opacity-0 pt-4">
-          With a focus on AI, cloud, and mobile solutions, Red Buffer’s
-          experienced teams optimize cost, resources, and timelines for startups
-          and enterprises across multiple industries.
+          Bytebridges specializes in delivering tailored web development
+          solutions, including CRM, CMS, and SAS applications. Our seasoned
+          teams are dedicated to optimizing costs, maximizing resources, and
+          ensuring efficient timelines for both startups and enterprises
+          spanning diverse industries.
         </p>
-        <button className="bg-primary text-white px-10 py-6">
+        <button className="bg-primary text-white px-10 py-6 mission-btn">
           Get Started
         </button>
       </div>
