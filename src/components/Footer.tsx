@@ -16,23 +16,23 @@ const Footer = () => {
             <h2 className="text-lg font-bold">Quick Links</h2>
             <ul className="space-y-2">
               <li>
-                <Link to="/">
-                  <a className="hover:text-gray-300">Home</a>
+                <Link to="/" className="hover:text-gray-300">
+                  Home
                 </Link>
               </li>
               <li>
-                <Link to="/">
-                  <a className="hover:text-gray-300">Services</a>
+                <Link to="/" className="hover:text-gray-300">
+                  Services
                 </Link>
               </li>
               <li>
-                <Link to="/">
-                  <a className="hover:text-gray-300">Projects</a>
+                <Link to="/" className="hover:text-gray-300">
+                  Projects
                 </Link>
               </li>
               <li>
-                <Link to="/">
-                  <a className="hover:text-gray-300">Contact</a>
+                <Link to="/" className="hover:text-gray-300">
+                  Contact
                 </Link>
               </li>
             </ul>

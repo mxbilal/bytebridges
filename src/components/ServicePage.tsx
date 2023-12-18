@@ -45,8 +45,8 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="md:p-8 md:px-24">
-      <p className=" p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
+    <div className="md:p-8 md:px-24 lg:px-16">
+      <p className="p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
         Solutions tailored to your business
       </p>
       <hr className="w-1/2 border-primary m-auto" />
