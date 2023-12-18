@@ -1,4 +1,5 @@
-import { useState } from "react";
+//@ts-nocheck
+import { ChangeEvent, FormEvent, useState } from "react";
 import contactIcon from "../assets/contact-svg.svg";
 import { useSnackbar } from "notistack";
 
@@ -17,11 +18,14 @@ const ContactUs = () => {
     subject: "",
     message: "",
   });
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormdata({ ...formdata, [name]: [value] });
+    setFormdata({ ...formdata, [name]: value });
   };
-  function handleSubmit(event) {
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const templateId = "template_l1j6brt";
     sendFeedback(templateId, {
@@ -32,22 +36,22 @@ const ContactUs = () => {
       reply_to: formdata.email,
     });
     enqueueSnackbar("Email is Sent!", { variant: "success" });
-  }
+  };
 
-  function sendFeedback(templateId: any, variables: any) {
+  const sendFeedback = (templateId: any, variables: any) => {
     window.emailjs
-      .send("service_yw9mev8", templateId, variables)
-      .then((res) => {
+      ?.send("service_yw9mev8", templateId, variables)
+      .then(() => {
         console.log("Email successfully sent!");
       })
-      // Handle errors here however you like, or use a React error boundary
-      .catch((err) =>
+      .catch((err: any) => {
         console.error(
-          "Oh well, you failed. Here some thoughts on the error that occured:",
+          "Oh well, you failed. Here are some thoughts on the error that occurred:",
           err
-        )
-      );
-  }
+        );
+      });
+  };
+
   return (
     <div className="p-8 w-full">
       <div className="md:w-full flex flex-col-reverse md:flex-row gap-4 md:gap-x-40 lg:gap-28 bg-white p-8">
