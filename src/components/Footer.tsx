@@ -40,9 +40,9 @@ const Footer = () => {
 
           <div className="space-y-4">
             <h2 className="text-lg font-bold">Contact Us</h2>
-            <p>Phone: +1 23 456 7890</p>
-            <p>Email: info@bytebridges.com</p>
-            <p>Address: 123 Street, City, Country</p>
+            <p>Phone: +92 3495683110</p>
+            <p>Email: mxbilal0@gmail.com</p>
+            <p>Address: Islamabad, Pakistan</p>
           </div>
         </div>
       </div>

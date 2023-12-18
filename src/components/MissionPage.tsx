@@ -1,4 +1,4 @@
-import missionImg from "../assets/m.svg";
+import missionImg from "../assets/mission-svg.svg";
 import "./component.scss";
 
 const MissionPage = () => {
@@ -10,12 +10,11 @@ const MissionPage = () => {
           Turning your vision into a success story!
         </h2>
         <hr className="border-primary" />
-        <p className="text-gray-700 font-readax_pro mb-8 animate-slow-fade-in delay-500 opacity-0 pt-4">
+        <p className="text-gray-700 text-sm font-readax_pro mb-8 animate-slow-fade-in delay-500 opacity-0 pt-4">
           Bytebridges specializes in delivering tailored web development
           solutions, including CRM, CMS, and SAS applications. Our seasoned
-          teams are dedicated to optimizing costs, maximizing resources, and
-          ensuring efficient timelines for both startups and enterprises
-          spanning diverse industries.
+          teams optimize costs, maximize resources, and ensure efficient
+          timelines for startups and enterprises across diverse industries.
         </p>
         <button className="bg-primary text-white px-10 py-6 mission-btn">
           Get Started
