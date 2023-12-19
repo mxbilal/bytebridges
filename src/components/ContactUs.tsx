@@ -53,7 +53,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="p-8 w-full">
+    <div className="p-8 w-full" id="contact-form">
       <div className="md:w-full flex flex-col-reverse md:flex-row gap-4 md:gap-x-40 lg:gap-28 bg-white p-8">
         {/* Form Section */}
         <div className="md:w-1/2 md:pr-8">

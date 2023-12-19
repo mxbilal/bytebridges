@@ -9,8 +9,12 @@ const HeaderPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-  };
+      setDrawerOpen(!drawerOpen);
+    },
+    handleContact = () => {
+      let id = window.document.getElementById("contact-form");
+      id?.scrollIntoView({ behavior: "smooth" });
+    };
 
   return (
     <header>
@@ -30,7 +34,10 @@ const HeaderPage = () => {
           <Link to="/" className="text-gray-700">
             Our Services
           </Link>
-          <button className="bg-transparent border-2 border-primary px-4 py-4 rounded contact-btn">
+          <button
+            className="bg-transparent border-2 border-primary px-4 py-4 rounded contact-btn"
+            onClick={handleContact}
+          >
             Contact Us
           </button>
         </div>

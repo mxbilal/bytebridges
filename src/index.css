@@ -14,6 +14,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  cursor: url('/src//assets/cursor.svg'),auto;
+  
+}
+::selection {
+  color: #07689F;
 }
 
 a {
