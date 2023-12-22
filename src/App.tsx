@@ -1,21 +1,17 @@
-import HeaderPage from "./components/HeaderPage";
+import Layout from "./pages/Layout";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
 import "./App.scss";
-import MissionPage from "./components/MissionPage";
-import ServicesPage from "./components/ServicePage";
-import Footer from "./components/Footer";
-import Technologies from "./components/Technologies";
-import ContactUs from "./components/ContactUs";
+import About from "./pages/About";
 
 function App() {
   return (
-    <>
-      <HeaderPage />
-      <MissionPage />
-      <ServicesPage />
-      <Technologies />
-      <ContactUs />
-      <Footer />
-    </>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Layout>
   );
 }
 

@@ -25,7 +25,7 @@ const HeaderPage = () => {
           <Link to="/" className="text-gray-700">
             Home
           </Link>
-          <Link to="/" className="text-gray-700">
+          <Link to="/about" className="text-gray-700">
             About Us
           </Link>
           <Link to="/" className="text-gray-700">
