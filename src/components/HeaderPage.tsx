@@ -5,6 +5,24 @@ import { useState } from "react";
 //src
 import "./component.scss";
 
+const HeaderLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Blogs",
+    path: "/",
+  },
+  {
+    name: "Our Services",
+    path: "/",
+  },
+];
 const HeaderPage = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -15,25 +33,17 @@ const HeaderPage = () => {
       let id = window.document.getElementById("contact-form");
       id?.scrollIntoView({ behavior: "smooth" });
     };
-
   return (
     <header>
       <div className="flex items-start justify-between p-8 md:p-6 md:px-24">
         <img src={viteLogo} className="w-32 h-auto logo" alt="Vite logo" />
 
         <div className="hidden md:flex space-x-10 items-center ">
-          <Link to="/" className="text-gray-700">
-            Home
-          </Link>
-          <Link to="/about" className="text-gray-700">
-            About Us
-          </Link>
-          <Link to="/" className="text-gray-700">
-            Blogs
-          </Link>
-          <Link to="/" className="text-gray-700">
-            Our Services
-          </Link>
+          {HeaderLinks.map((link) => (
+            <Link key={link.name} to={link.path} className="text-gray-700">
+              {link.name}
+            </Link>
+          ))}
           <button
             className="bg-transparent border-2 border-primary px-4 py-4 rounded contact-btn"
             onClick={handleContact}
@@ -82,18 +92,16 @@ const HeaderPage = () => {
                   d="M6 18L18 6M6 6l12 12"
                 ></path>
               </svg>
-              <Link to="/" className="block py-2 text-gray-700">
-                Home
-              </Link>
-              <Link to="/" className="block py-2 text-gray-700">
-                About Us
-              </Link>
-              <Link to="/" className="block py-2 text-gray-700">
-                Blogs
-              </Link>
-              <Link to="/" className="block py-2 text-gray-700">
-                Our Services
-              </Link>
+              {HeaderLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  className="block py-2 text-gray-700"
+                  onClick={handleDrawerToggle}
+                >
+                  {link.name}
+                </Link>
+              ))}
               <button className="bg-primary text-white py-2 rounded hover:bg-on_hover">
                 Contact Us
               </button>
