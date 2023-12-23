@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import viteLogo from "../assets/logo.svg";
 import { useState } from "react";
 
 //src
 import "./component.scss";
+import ContactUs from "./ContactUs";
 
 const HeaderLinks = [
   {
@@ -20,10 +21,11 @@ const HeaderLinks = [
   },
   {
     name: "Our Services",
-    path: "/",
+    path: "/services",
   },
 ];
 const HeaderPage = () => {
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleDrawerToggle = () => {
@@ -31,7 +33,8 @@ const HeaderPage = () => {
     },
     handleContact = () => {
       let id = window.document.getElementById("contact-form");
-      id?.scrollIntoView({ behavior: "smooth" });
+      if (id) id?.scrollIntoView({ behavior: "smooth" });
+      else navigate("/contact");
     };
   return (
     <header>

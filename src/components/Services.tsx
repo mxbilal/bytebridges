@@ -1,16 +1,12 @@
 import ServiceCard from "./ServiceCard";
 import reactLogo from "../assets/react.svg";
-// import nodeLogo from "../assets/node.svg";
-// import jsLogo from "../assets/js.svg";
-// import nextLogo from "../assets/next.svg";
-// import nestLogo from "../assets/nest.svg";
-// import vueLogo from "../assets/vue.svg";
 import cmsLogo from "../assets/cms.svg";
 import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
 import hostingLogo from "../assets/hosting.svg";
+import Technologies from "./Technologies";
 
-const ServicesPage = () => {
+const Services = ({ home }: { home: Boolean }) => {
   const services = [
     {
       title: "CRM Applications",
@@ -46,11 +42,19 @@ const ServicesPage = () => {
 
   return (
     <div className="md:p-8 md:px-24 lg:px-16">
-      <p className="p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
-        Solutions tailored to your business
-      </p>
-      <hr className="w-1/2 border-primary m-auto" />
-      <div className="p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {home && (
+        <>
+          <p className="p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
+            Solutions tailored to your business
+          </p>
+          <hr className="w-1/2 border-primary m-auto" />
+        </>
+      )}
+      <div
+        className={`${
+          home && "p-8"
+        } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
+      >
         {services.map((service, index) => (
           <ServiceCard
             key={index}
@@ -64,4 +68,4 @@ const ServicesPage = () => {
   );
 };
 
-export default ServicesPage;
+export default Services;

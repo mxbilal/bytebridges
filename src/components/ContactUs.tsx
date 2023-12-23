@@ -53,7 +53,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="p-8 w-full md:px-24" id="contact-form">
+    <div className="px-4 py-8 w-full md:px-24" id="contact-form">
       <div className="md:w-full flex flex-col-reverse md:flex-row gap-4 md:gap-x-40 lg:gap-28 bg-white p-8">
         {/* Form Section */}
         <div className="md:w-1/2 md:pr-8">
@@ -136,7 +136,7 @@ const ContactUs = () => {
         </div>
 
         <div className="md:w-1/2 ">
-          <img src={contactIcon} className="md:w-3/4 w-full" />
+          <img src={contactIcon} className="md:w-10/12 w-full" />
         </div>
       </div>
     </div>

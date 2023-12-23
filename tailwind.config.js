@@ -22,6 +22,9 @@ module.exports = {
         desktop: "1280px",
       },
     },
+    listStyleType: {
+      circle: "circle",
+    },
   },
   variants: {
     extend: {
