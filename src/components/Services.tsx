@@ -3,6 +3,7 @@ import reactLogo from "../assets/react.svg";
 import cmsLogo from "../assets/cms.svg";
 import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
+import storybook from "../assets/storybook.svg";
 import hostingLogo from "../assets/hosting.svg";
 
 const Services = ({ home }: { home: Boolean }) => {
@@ -18,6 +19,12 @@ const Services = ({ home }: { home: Boolean }) => {
       image: reactLogo,
       description:
         "Creating websites with responsive designs that adapt seamlessly to various devices, providing an optimal user experience.",
+    },
+    {
+      title: "Storybook UI Components",
+      image: storybook,
+      description:
+        "Building UI components and pages in isolation. Thousands of teams use it for UI development",
     },
     {
       title: "CMS Systems",
