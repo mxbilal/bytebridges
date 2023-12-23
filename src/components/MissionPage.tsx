@@ -20,7 +20,10 @@ const MissionPage = ({ home }: { home: Boolean }) => {
         <h2 className="text-2xl md:text-5xl font-bold text-light_black leading-tight font-readax_pro mb-4 animate-slow-fade-in">
           {home ? homeHeading() : "Connecting tommorow's technology today"}
         </h2>
-        <hr className="border-primary" />
+        <div className="line-container">
+          <hr className=" border-primary m-auto animated-line w-0" />
+        </div>
+        {/* <hr className="border-primary" /> */}
         <p
           className={`text-graay-700 text-lg font-readax_pro mb-8 animate-slow-fade-in delay-500 opacity-0 pt-4`}
         >

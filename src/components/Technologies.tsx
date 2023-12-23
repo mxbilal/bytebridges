@@ -1,6 +1,7 @@
 import mernIcon from "../assets/mern.jpg";
 import mevnIcon from "../assets/mevn.jpg";
 import fernIcon from "../assets/fern.jpg";
+
 const Technologies = () => {
   return (
     <div className="p-8 bg-slate-50 md:py-24">

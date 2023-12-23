@@ -30,7 +30,7 @@ const ScrollToTop = () => {
     <div>
       {showScroll && (
         <div
-          className="fixed bottom-8 right-8 bg-gray-800 text-white p-2 rounded-full cursor-pointer hover:bg-gray-600"
+          className="fixed bottom-8 right-8 bg-gray-800 border border-white text-white p-2 rounded-full cursor-pointer hover:bg-gray-600"
           onClick={scrollToTop}
         >
           <svg

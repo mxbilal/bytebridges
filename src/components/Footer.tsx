@@ -49,7 +49,7 @@ const Footer = () => {
 
       <div className="border-t border-gray-700 mt-6">
         <div className="container mx-auto px-8 py-4 text-center">
-          <p>&copy; 2022 ByteBridges. All rights reserved.</p>
+          <p>&copy; 2023 ByteBridges. All rights reserved.</p>
         </div>
       </div>
     </footer>
