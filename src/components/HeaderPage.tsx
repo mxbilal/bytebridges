@@ -4,7 +4,6 @@ import { useState } from "react";
 
 //src
 import "./component.scss";
-import ContactUs from "./ContactUs";
 
 const HeaderLinks = [
   {
