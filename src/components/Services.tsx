@@ -4,7 +4,6 @@ import cmsLogo from "../assets/cms.svg";
 import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
 import hostingLogo from "../assets/hosting.svg";
-import Technologies from "./Technologies";
 
 const Services = ({ home }: { home: Boolean }) => {
   const services = [
