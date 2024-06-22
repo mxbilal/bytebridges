@@ -1,6 +1,6 @@
-import mernIcon from "../assets/mern.jpg";
+import mernIcon from "../assets/mern.png";
 import mevnIcon from "../assets/mevn.jpg";
-import fernIcon from "../assets/fern.jpg";
+import dotNetIcon from "../assets/dot_net.png";
 
 const Technologies = () => {
   return (
@@ -42,16 +42,16 @@ const technologies = [
       "Full-stack development using MongoDB, Express, React, and Node.js.",
   },
   {
+    name: ".NET Core",
+    icon: dotNetIcon,
+    description:
+      "Development with ASP.Net MVC, ASP.Net Core Web APIs, LINQ, Entity Framework and ADO.NET",
+  },
+  {
     name: "MEVN Stack",
     icon: mevnIcon,
     description:
       "Full-stack development using MongoDB, Express, Vue.js, and Node.js.",
-  },
-  {
-    name: "FERN Stack",
-    icon: fernIcon,
-    description:
-      "Full-stack development using Firebase, Express, React, and Node.js.",
   },
 ];
 

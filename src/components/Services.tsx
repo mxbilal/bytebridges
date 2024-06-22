@@ -1,6 +1,6 @@
 import ServiceCard from "./ServiceCard";
 import reactLogo from "../assets/react.svg";
-import cmsLogo from "../assets/cms.svg";
+import microServiceLogo from "../assets/micro_services.png";
 import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
 import storybook from "../assets/storybook.svg";
@@ -9,10 +9,10 @@ import hostingLogo from "../assets/hosting.svg";
 const Services = ({ home }: { home: Boolean }) => {
   const services = [
     {
-      title: "CRM Applications",
+      title: "All Applications",
       image: crmLogo,
       description:
-        "Tailoring custom CRM solutions to streamline your business processes, enhancing efficiency and customer relationship management.",
+        "Tailoring custom CRM/CMS and ERP solutions to streamline your business processes, enhancing efficiency and customer relationship management.",
     },
     {
       title: "Responsive Designs",
@@ -27,10 +27,10 @@ const Services = ({ home }: { home: Boolean }) => {
         "Building UI components and pages in isolation. Thousands of teams use it for UI development",
     },
     {
-      title: "CMS Systems",
-      image: cmsLogo,
+      title: "Microservices Architecture",
+      image: microServiceLogo,
       description:
-        "Developing Content Management Systems for easy content updates and management, empowering you to control your online content effortlessly.",
+        "Designing and implementing scalable microservices architectures to enhance system flexibility, resilience, and ease of maintenance.",
     },
     {
       title: "AWS Services Integration",
@@ -57,9 +57,8 @@ const Services = ({ home }: { home: Boolean }) => {
         </>
       )}
       <div
-        className={`${
-          home && "p-8"
-        } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
+        className={`${home && "p-8"
+          } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
       >
         {services.map((service, index) => (
           <ServiceCard
