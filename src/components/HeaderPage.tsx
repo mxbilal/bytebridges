@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import viteLogo from "../assets/logo.svg";
+import viteLogo from "../assets/byte_logo.svg";
 import { useState } from "react";
 
 //src
@@ -38,7 +38,7 @@ const HeaderPage = () => {
   return (
     <header>
       <div className="flex items-start justify-between p-8 md:p-6 md:px-24">
-        <img src={viteLogo} className="w-32 h-auto logo" alt="Vite logo" />
+        <img src={viteLogo} className="w-36 h-auto logo" alt="Vite logo" />
 
         <div className="hidden md:flex space-x-10 items-center ">
           {HeaderLinks.map((link) => (
