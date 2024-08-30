@@ -1,7 +1,7 @@
 import Services from "../../components/Services";
 import ServiceCard from "../../components/ServiceCard";
 import js from "../../assets/js.svg";
-import node from "../../assets/node.svg";
+import backend from "../../assets/backend.svg";
 import hosting from "../../assets/hosting.svg";
 import db from "../../assets/db.svg";
 
@@ -27,12 +27,12 @@ const ServicesPage = () => {
         <ServiceCard
           title="Frontend"
           image={js}
-          description="Reactjs, Nextjs, Vuejs, Html, Css, Scss, Javascript"
+          description="Reactjs, Nextjs, Vuejs, Angularjs, Javascript, Html 5, Css, Scss, Tailwind css"
         />
         <ServiceCard
           title="Backend"
-          image={node}
-          description="Nodejs, Expressjs, Nestjs"
+          image={backend}
+          description="Nodejs, Expressjs, Nestjs, .NET Core 8,  ASP .NET Core, MVC, Microservices"
         />
         <ServiceCard
           title="Database"
@@ -42,7 +42,7 @@ const ServicesPage = () => {
         <ServiceCard
           title="Deployment"
           image={hosting}
-          description="Digital Ocean,  Microsoft Azure, AWS"
+          description="Digital Ocean,  Microsoft Azure, AWS, Docker, Jenkins"
         />
       </div>
     </div>
