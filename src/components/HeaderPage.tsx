@@ -16,7 +16,7 @@ const HeaderLinks = [
   },
   {
     name: "Blogs",
-    path: "/",
+    path: "/blogs",
   },
   {
     name: "Our Services",
@@ -38,7 +38,7 @@ const HeaderPage = () => {
   return (
     <header>
       <div className="flex items-start justify-between p-8 md:p-6 md:px-24">
-        <img src={viteLogo} className="w-36 h-auto logo" alt="Vite logo" />
+        <img src={viteLogo} className="w-28 h-auto logo" alt="Vite logo" />
 
         <div className="hidden md:flex space-x-10 items-center ">
           {HeaderLinks.map((link) => (
