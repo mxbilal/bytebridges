@@ -1,6 +1,6 @@
-import mernIcon from "../assets/mern.png";
-import mevnIcon from "../assets/mevn.jpg";
-import dotNetIcon from "../assets/dot_net.png";
+import mernIcon from "../assets/mern.svg";
+import mevnIcon from "../assets/mevn.svg";
+import dotNetIcon from "../assets/dot_net.svg";
 
 const Technologies = () => {
   return (

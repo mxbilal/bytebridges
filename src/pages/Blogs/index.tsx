@@ -41,7 +41,7 @@ function BlogPage() {
       <h2 className="text-3xl md:text-5xl font-bold text-light_black leading-tight font-readax_pro mb-4 animate-slow-fade-in">
         Blogs
       </h2>
-      <hr className="border-primary w-32 border-2" />
+      <hr className="border-primary w-32 " />
       <div className="grid gap-8 py-4">
         {blogs.map((blog, index) => (
           <div

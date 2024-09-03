@@ -1,6 +1,6 @@
 import ServiceCard from "./ServiceCard";
 import reactLogo from "../assets/react.svg";
-import microServiceLogo from "../assets/micro_services.png";
+import microServiceLogo from "../assets/micro_services.svg";
 import crmLogo from "../assets/crm.svg";
 import awsLogo from "../assets/aws.svg";
 import storybook from "../assets/storybook.svg";
@@ -57,8 +57,9 @@ const Services = ({ home }: { home: Boolean }) => {
         </>
       )}
       <div
-        className={`${home && "p-8"
-          } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
+        className={`${
+          home && "p-8"
+        } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
       >
         {services.map((service, index) => (
           <ServiceCard
