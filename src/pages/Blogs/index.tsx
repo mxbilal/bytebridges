@@ -1,4 +1,4 @@
-import logo from "../../assets/byte_logo.svg";
+import logo from "../../assets/byte_logo.png";
 
 const blogs = [
   {

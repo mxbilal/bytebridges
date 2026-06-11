@@ -1,52 +1,73 @@
 import Services from "../../components/Services";
 import ServiceCard from "../../components/ServiceCard";
-import js from "../../assets/js.svg";
-import backend from "../../assets/backend.svg";
-import hosting from "../../assets/hosting.svg";
-import db from "../../assets/db.svg";
+import Section from "../../components/ui/Section";
+import Container from "../../components/ui/Container";
+import Button from "../../components/ui/Button";
+import { techStack } from "../../content/services";
+import { whatsappUrl } from "../../content/site";
 
-const ServicesPage = () => {
-  return (
-    <div className="p-8 md:px-24">
-      <h2 className="text-3xl md:text-5xl font-bold text-light_black leading-tight font-readax_pro mb-4 animate-slow-fade-in">
-        SERVICES
-      </h2>
-      <hr className="border-primary w-1/5 " />
-      <p
-        className={`text-graay-700 text-lg font-readax_pro mb-8 animate-slow-fade-in delay-500 opacity-0 pt-4`}
-      >
-        If it’s digital, you name it and we do it!
-      </p>
-      <Services home={false} />
-      <h2 className="pt-10 text-3xl md:text-5xl font-bold text-light_black leading-tight font-readax_pro mb-4 animate-slow-fade-in">
-        TECHNOLOGY STACK
-      </h2>
-      <hr className="border-primary w-2/5 pb-8" />
-
-      <div className="md:p-8 md:px-24 lg:px-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <ServiceCard
-          title="Frontend"
-          image={js}
-          description="Reactjs, Nextjs, Vuejs, Angularjs, Javascript, Html 5, Css, Scss, Tailwind css"
-        />
-        <ServiceCard
-          title="Backend"
-          image={backend}
-          description="Nodejs, Expressjs, Nestjs, .NET Core 8,  ASP .NET Core, MVC, Microservices"
-        />
-        <ServiceCard
-          title="Database"
-          image={db}
-          description="MySQL, SQLite, PostgreSQL, MongoDB, Elastic Search, Redis, Influx DB "
-        />
-        <ServiceCard
-          title="Deployment"
-          image={hosting}
-          description="Digital Ocean,  Microsoft Azure, AWS, Docker, Jenkins"
-        />
-      </div>
+const ServicesPage = () => (
+  <>
+    <div className="hero-gradient py-16 md:py-20">
+      <Container>
+        <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
+          Services
+        </p>
+        <h1 className="font-heading font-bold text-3xl md:text-5xl text-slate-900 mb-4">
+          Services
+        </h1>
+        <p className="text-muted text-lg max-w-2xl">
+          MVPs, CRMs, APIs, cloud setup, and ongoing maintenance. Scope and price
+          are clear before we start.
+        </p>
+      </Container>
     </div>
-  );
-};
+
+    <Container className="py-12 md:py-16">
+      <Services detailed />
+    </Container>
+
+    <Section alt>
+      <div className="text-center mb-12">
+        <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
+          Stack
+        </p>
+        <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900">
+          Technology stack
+        </h2>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {techStack.map((item) => (
+          <ServiceCard
+            key={item.title}
+            title={item.title}
+            image={item.image}
+            description={item.description}
+          />
+        ))}
+      </div>
+    </Section>
+
+    <div className="py-16 bg-primary text-white text-center">
+      <Container>
+        <h2 className="font-heading font-bold text-2xl md:text-3xl mb-4">
+          Not sure which service fits?
+        </h2>
+        <p className="text-white/80 mb-6 max-w-xl mx-auto">
+          Message me on WhatsApp and we'll figure out the right approach for your
+          project in a quick conversation.
+        </p>
+        <Button
+          href={whatsappUrl("Hi Bilal, I'm not sure which service I need. Can we discuss?")}
+          external
+          variant="secondary"
+          className="!bg-white !text-primary hover:!bg-slate-100"
+        >
+          Chat on WhatsApp
+        </Button>
+      </Container>
+    </div>
+  </>
+);
 
 export default ServicesPage;

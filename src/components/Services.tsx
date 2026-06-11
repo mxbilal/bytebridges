@@ -1,77 +1,76 @@
 import ServiceCard from "./ServiceCard";
-import reactLogo from "../assets/react.svg";
-import microServiceLogo from "../assets/micro_services.svg";
-import crmLogo from "../assets/crm.svg";
-import awsLogo from "../assets/aws.svg";
-import storybook from "../assets/storybook.svg";
-import hostingLogo from "../assets/hosting.svg";
+import Section from "./ui/Section";
+import Button from "./ui/Button";
+import { services } from "../content/services";
+import { whatsappUrl } from "../content/site";
 
-const Services = ({ home }: { home: Boolean }) => {
-  const services = [
-    {
-      title: "All Applications",
-      image: crmLogo,
-      description:
-        "Tailoring custom CRM/CMS and ERP solutions to streamline your business processes, enhancing efficiency and customer relationship management.",
-    },
-    {
-      title: "Responsive Designs",
-      image: reactLogo,
-      description:
-        "Creating websites with responsive designs that adapt seamlessly to various devices, providing an optimal user experience.",
-    },
-    {
-      title: "Storybook UI Components",
-      image: storybook,
-      description:
-        "Building UI components and pages in isolation. Thousands of teams use it for UI development",
-    },
-    {
-      title: "Microservices Architecture",
-      image: microServiceLogo,
-      description:
-        "Designing and implementing scalable microservices architectures to enhance system flexibility, resilience, and ease of maintenance.",
-    },
-    {
-      title: "AWS Services Integration",
-      image: awsLogo,
-      description:
-        "Leveraging the full potential of AWS services for cloud computing, storage, and scalable solutions tailored to your needs.",
-    },
-    {
-      title: "Hosting Services",
-      image: hostingLogo,
-      description:
-        "Providing reliable hosting solutions for web applications, ensuring high availability and security for your online presence.",
-    },
-  ];
+interface ServicesProps {
+  home?: boolean;
+  detailed?: boolean;
+}
 
-  return (
-    <div className="md:p-8 md:px-24 lg:px-16">
+const Services = ({ home = false, detailed = false }: ServicesProps) => {
+  const displayServices = home ? services.slice(0, 6) : services;
+
+  const content = (
+    <>
       {home && (
-        <>
-          <p className="p-4 text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
-            Solutions tailored to your business
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
+            Services
           </p>
-          <hr className="w-1/2 border-primary m-auto" />
-        </>
+          <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">
+            What I build
+          </h2>
+          <p className="text-muted">
+            MVPs, CRMs, admin panels, APIs. Whatever gets your product in front
+            of users.
+          </p>
+        </div>
       )}
-      <div
-        className={`${
-          home && "p-8"
-        } grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8`}
-      >
-        {services.map((service, index) => (
-          <ServiceCard
-            key={index}
-            title={service.title}
-            image={service.image}
-            description={service.description}
-          />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {displayServices.map((service) => (
+          <div key={service.slug} id={detailed ? service.slug : undefined}>
+            <ServiceCard
+              title={service.title}
+              image={service.image}
+              description={service.description}
+              slug={home ? service.slug : undefined}
+              whoFor={service.whoFor}
+              timeline={service.timeline}
+              detailed={detailed}
+            />
+          </div>
         ))}
       </div>
-    </div>
+
+      {home && (
+        <div className="text-center mt-12 space-y-4">
+          <Button to="/services" variant="outline">
+            View all services
+          </Button>
+          <p className="text-sm text-muted">
+            Have a similar need?{" "}
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary font-semibold hover:underline"
+            >
+              Let's talk on WhatsApp
+            </a>
+          </p>
+        </div>
+      )}
+    </>
   );
+
+  if (home) {
+    return <Section>{content}</Section>;
+  }
+
+  return <div>{content}</div>;
 };
 
 export default Services;

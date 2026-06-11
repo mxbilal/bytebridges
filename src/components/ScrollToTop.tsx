@@ -1,55 +1,26 @@
 import { useState, useEffect } from "react";
+import { ArrowUp } from "lucide-react";
 
 const ScrollToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setShowScroll(true);
-      } else {
-        setShowScroll(false);
-      }
-    };
-
+    const handleScroll = () => setShowScroll(window.scrollY > 300);
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
+  if (!showScroll) return null;
 
   return (
-    <div>
-      {showScroll && (
-        <div
-          className="fixed bottom-8 right-8 bg-gray-800 border border-white text-white p-2 rounded-full cursor-pointer hover:bg-gray-600"
-          onClick={scrollToTop}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="h-6 w-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M5 10l7-7m0 0l7 7m-7-7v18"
-            />
-          </svg>
-        </div>
-      )}
-    </div>
+    <button
+      type="button"
+      aria-label="Scroll to top"
+      className="fixed bottom-6 left-6 z-50 flex items-center justify-center w-11 h-11 rounded-full bg-slate-800 text-white shadow-lg hover:bg-slate-700 transition-colors"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    >
+      <ArrowUp className="w-5 h-5" />
+    </button>
   );
 };
 

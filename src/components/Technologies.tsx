@@ -1,38 +1,7 @@
+import Section from "./ui/Section";
 import mernIcon from "../assets/mern.svg";
 import mevnIcon from "../assets/mevn.svg";
-import dotNetIcon from "../assets/dot_net.svg";
-
-const Technologies = () => {
-  return (
-    <div className="p-8 bg-slate-50 md:py-24">
-      <p className="text-2xl md:text-5xl font-bold text-light_black text-center leading-tight font-readax_pro mb-4">
-        Technologies We Embrace
-      </p>
-      <hr className="w-1/2 border-primary m-auto" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 md:px-52 lg:px-28 py-6">
-        {technologies.map((tech, index) => (
-          <div key={index} className="flex items-center flex-col">
-            <div className="h-40 w-40 rounded-full mix-blend-multiply hover:bg-white flex items-center justify-center shadow-xl transform transition-transform hover:scale-105 hover:shadow-2xl relative overflow-hidden">
-              <img
-                src={tech.icon}
-                alt={`${tech.name} logo`}
-                width={100}
-                className="mix-blend-multiply"
-              />
-            </div>
-
-            <div className="p-6 text-center flex flex-col items-center">
-              <h3 className="text-lg font-bold mb-2">{tech.name}</h3>
-              <p className="text-gray-700 md:w-1/2 lg:w-full">
-                {tech.description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
+import angularIcon from "../assets/angular.svg";
 
 const technologies = [
   {
@@ -42,10 +11,10 @@ const technologies = [
       "Full-stack development using MongoDB, Express, React, and Node.js.",
   },
   {
-    name: ".NET Core",
-    icon: dotNetIcon,
+    name: "Angular",
+    icon: angularIcon,
     description:
-      "Development with ASP.Net MVC, ASP.Net Core Web APIs, LINQ, Entity Framework and ADO.NET",
+      "TypeScript apps with Angular Material and RxJS. Good fit for larger admin panels and internal tools.",
   },
   {
     name: "MEVN Stack",
@@ -54,5 +23,31 @@ const technologies = [
       "Full-stack development using MongoDB, Express, Vue.js, and Node.js.",
   },
 ];
+
+const Technologies = () => (
+  <Section alt>
+    <div className="text-center max-w-2xl mx-auto mb-12">
+      <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
+        Tech stacks
+      </p>
+      <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900">
+        Stacks I work with
+      </h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      {technologies.map((tech) => (
+        <div key={tech.name} className="text-center">
+          <div className="w-32 h-32 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4 hover:shadow-lg transition-shadow">
+            <img src={tech.icon} alt={`${tech.name} logo`} className="w-20" />
+          </div>
+          <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
+            {tech.name}
+          </h3>
+          <p className="text-sm text-muted leading-relaxed">{tech.description}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+);
 
 export default Technologies;
