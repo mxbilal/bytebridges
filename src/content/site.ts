@@ -15,21 +15,21 @@ export const site = {
 } as const;
 
 export const whatsappUrl = (message?: string) => {
-  const text = message ?? "Hi Bilal, I'd like to discuss a project with ByteBridges.";
+  const text = message ?? "Hi ByteBridges, I'd like to discuss a project.";
   return `https://wa.me/${site.phoneRaw}?text=${encodeURIComponent(text)}`;
 };
 
 export const whatsappTemplates = [
   {
     label: "I need an MVP",
-    message: "Hi Bilal, I'm looking to build an MVP and would like to discuss scope and timeline.",
+    message: "Hi ByteBridges, I'm looking to build an MVP and would like to discuss scope and timeline.",
   },
   {
     label: "Help with existing app",
-    message: "Hi Bilal, I have an existing application that needs improvements. Can we talk?",
+    message: "Hi ByteBridges, I have an existing application that needs improvements. Can we talk?",
   },
   {
     label: "General inquiry",
-    message: "Hi Bilal, I'd like to learn more about your development services.",
+    message: "Hi ByteBridges, I'd like to learn more about your development services.",
   },
 ] as const;

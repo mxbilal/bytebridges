@@ -1,4 +1,4 @@
-import { GitHubIcon, LinkedInIcon } from "../ui/SocialIcons";
+import { GitHubIcon } from "../ui/SocialIcons";
 import Section from "../ui/Section";
 import { aboutContent } from "../../content/about";
 import { site } from "../../content/site";
@@ -13,13 +13,20 @@ const PersonalIntro = () => (
       </div>
       <div className="md:col-span-3">
         <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">
-          About me
+          About us
         </p>
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">
-          Hi, I'm {site.founder}
+          {aboutContent.headline}
         </h2>
-        <p className="text-muted leading-relaxed mb-4">{aboutContent.intro}</p>
-        <p className="text-muted leading-relaxed mb-6">{aboutContent.story}</p>
+        <p className="text-muted leading-relaxed mb-6">{aboutContent.intro}</p>
+
+        <div className="border-l-2 border-primary pl-5 mb-6">
+          <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">
+            {aboutContent.founder.title}
+          </h3>
+          <p className="text-muted leading-relaxed">{aboutContent.founder.bio}</p>
+        </div>
+
         <div className="flex flex-wrap gap-3">
           <a
             href={site.social.github}
@@ -30,7 +37,7 @@ const PersonalIntro = () => (
             <GitHubIcon className="w-4 h-4" />
             GitHub
           </a>
-          <a
+          {/* hide linkedin for now <a
             href={site.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
@@ -38,7 +45,7 @@ const PersonalIntro = () => (
           >
             <LinkedInIcon className="w-4 h-4" />
             LinkedIn
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Icon, { IconName } from "./ui/Icon";
 
 interface CardProps {
   title: string;
   description: string;
-  image: string;
+  icon: IconName;
   slug?: string;
   whoFor?: string;
   timeline?: string;
@@ -13,16 +14,16 @@ interface CardProps {
 const ServiceCard = ({
   title,
   description,
-  image,
+  icon,
   slug,
   whoFor,
   timeline,
   detailed = false,
 }: CardProps) => {
   return (
-    <div className="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-lg transition-all duration-300 h-full flex flex-col">
-      <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
-        <img src={image} alt="" className="w-8 h-8 object-contain" />
+    <div className="group bg-white p-6 rounded-2xl border border-slate-200 hover:border-primary/30 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+      <div className="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300">
+        <Icon name={icon} className="w-7 h-7" />
       </div>
       <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
         {title}

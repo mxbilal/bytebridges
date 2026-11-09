@@ -16,9 +16,8 @@ const Footer = () => {
               ByteBridges
             </h2>
             <p className="text-sm leading-relaxed max-w-md">
-              Custom CRM, CMS, and SaaS development by Bilal. Based in Islamabad,
-              working with clients remotely. Bigger projects? I bring in a small
-              team I trust.
+              Custom CRM, CMS, and SaaS development, built by our team based in
+              Islamabad, working with clients remotely.
             </p>
             <div className="flex gap-3 mt-5">
               <a

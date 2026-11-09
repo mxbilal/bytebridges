@@ -75,7 +75,7 @@ const ContactUs = ({
 
     try {
       await sendContactEmail(formdata);
-      enqueueSnackbar("Message sent! I'll get back to you soon.", {
+      enqueueSnackbar("Message sent! We'll get back to you soon.", {
         variant: "success",
       });
       setFormdata(initialForm);
@@ -104,7 +104,7 @@ const ContactUs = ({
               Let's build something
             </h1>
             <p className="text-muted">
-              Tell me about your project and I'll respond within 1 hour.
+              Tell us about your project and we'll respond within 1 hour.
             </p>
           </div>
         )}
@@ -118,7 +118,7 @@ const ContactUs = ({
             )}
             {!showPageHeader && (
               <p className="text-muted mb-6">
-                Fill out the form and I'll get back to you shortly.
+                Fill out the form and we'll get back to you shortly.
               </p>
             )}
 
@@ -233,7 +233,7 @@ const ContactUs = ({
                   rows={5}
                   className={`${inputClass} resize-none`}
                   required
-                  placeholder="Tell me about your project, goals, and any deadlines..."
+                  placeholder="Tell us about your project, goals, and any deadlines..."
                   value={formdata.message}
                   onChange={handleChange}
                 />

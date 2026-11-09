@@ -1,4 +1,5 @@
 import { aboutContent } from "../../content/about";
+import CountUp from "../ui/CountUp";
 
 const TrustBar = () => (
   <div className="border-y border-slate-100 bg-surface py-8">
@@ -6,9 +7,10 @@ const TrustBar = () => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {aboutContent.stats.map((stat) => (
           <div key={stat.label} className="text-center">
-            <p className="font-heading font-bold text-2xl md:text-3xl text-primary">
-              {stat.value}
-            </p>
+            <CountUp
+              value={stat.value}
+              className="font-heading font-bold text-2xl md:text-3xl text-primary block"
+            />
             <p className="text-sm text-muted mt-1">{stat.label}</p>
           </div>
         ))}

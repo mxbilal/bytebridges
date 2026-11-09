@@ -11,12 +11,12 @@ const NotFound = () => (
       Page not found
     </h1>
     <p className="text-muted mb-8 max-w-md mx-auto">
-      That page doesn't exist. Head back home or message me if you need something.
+      That page doesn't exist. Head back home or message us if you need something.
     </p>
     <div className="flex flex-wrap justify-center gap-4">
       <Button to="/">Go home</Button>
       <Button href={whatsappUrl()} external variant="outline">
-        WhatsApp me
+        WhatsApp us
       </Button>
     </div>
   </Container>

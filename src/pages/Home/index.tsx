@@ -6,6 +6,7 @@ import FeaturedWork from "../../components/home/FeaturedWork";
 import Technologies from "../../components/Technologies";
 import WhyByteBridges from "../../components/home/WhyByteBridges";
 import PersonalIntro from "../../components/home/PersonalIntro";
+import Testimonials from "../../components/Testimonials";
 import FAQ from "../../components/home/FAQ";
 import ContactUs from "../../components/ContactUs";
 
@@ -19,6 +20,7 @@ const Home = () => (
     <FeaturedWork />
     <Technologies />
     <WhyByteBridges />
+    <Testimonials />
     <FAQ />
     <ContactUs />
   </>

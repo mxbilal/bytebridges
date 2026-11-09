@@ -1,24 +1,23 @@
 import Section from "./ui/Section";
-import mernIcon from "../assets/mern.svg";
-import mevnIcon from "../assets/mevn.svg";
-import angularIcon from "../assets/angular.svg";
+import Icon, { IconName } from "./ui/Icon";
+import Reveal from "./ui/Reveal";
 
-const technologies = [
+const technologies: { name: string; icon: IconName; description: string }[] = [
   {
     name: "MERN Stack",
-    icon: mernIcon,
+    icon: "react",
     description:
       "Full-stack development using MongoDB, Express, React, and Node.js.",
   },
   {
     name: "Angular",
-    icon: angularIcon,
+    icon: "angular",
     description:
       "TypeScript apps with Angular Material and RxJS. Good fit for larger admin panels and internal tools.",
   },
   {
     name: "MEVN Stack",
-    icon: mevnIcon,
+    icon: "vue",
     description:
       "Full-stack development using MongoDB, Express, Vue.js, and Node.js.",
   },
@@ -31,20 +30,24 @@ const Technologies = () => (
         Tech stacks
       </p>
       <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900">
-        Stacks I work with
+        Stacks we work with
       </h2>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-      {technologies.map((tech) => (
-        <div key={tech.name} className="text-center">
-          <div className="w-32 h-32 rounded-full bg-white shadow-md flex items-center justify-center mx-auto mb-4 hover:shadow-lg transition-shadow">
-            <img src={tech.icon} alt={`${tech.name} logo`} className="w-20" />
+      {technologies.map((tech, i) => (
+        <Reveal key={tech.name} delay={i * 110}>
+          <div className="group text-center">
+            <div className="w-32 h-32 rounded-full bg-white text-primary shadow-md flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1 group-hover:bg-primary group-hover:text-white">
+              <Icon name={tech.icon} className="w-16 h-16" />
+            </div>
+            <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
+              {tech.name}
+            </h3>
+            <p className="text-sm text-muted leading-relaxed">
+              {tech.description}
+            </p>
           </div>
-          <h3 className="font-heading font-bold text-lg text-slate-900 mb-2">
-            {tech.name}
-          </h3>
-          <p className="text-sm text-muted leading-relaxed">{tech.description}</p>
-        </div>
+        </Reveal>
       ))}
     </div>
   </Section>

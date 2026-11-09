@@ -6,7 +6,7 @@ const steps = [
     icon: Search,
     title: "Discovery",
     description:
-      "We talk through your goals, users, and constraints. I ask questions upfront so we don't miss anything important.",
+      "We talk through your goals, users, and constraints. We ask questions upfront so we don't miss anything important.",
   },
   {
     icon: FileText,
@@ -18,7 +18,7 @@ const steps = [
     icon: Code2,
     title: "Build",
     description:
-      "I ship in iterations with regular updates. You see progress each week and can give feedback as we go.",
+      "We ship in iterations with regular updates. You see progress each week and can give feedback as we go.",
   },
   {
     icon: Rocket,
@@ -35,7 +35,7 @@ const HowIWork = () => (
         Process
       </p>
       <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-4">
-        How I work
+        How we work
       </h2>
       <p className="text-muted">
         Simple steps. You stay in the loop the whole way.

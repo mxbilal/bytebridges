@@ -1,24 +1,24 @@
 import Section from "../ui/Section";
-import { Zap, Shield, MessageSquare } from "lucide-react";
+import { Users, Zap, Shield } from "lucide-react";
 
 const pillars = [
+  {
+    icon: Users,
+    title: "Small team, real accountability",
+    description:
+      "No account managers, no rotating staff. You work directly with the people building your product — founder included — so nothing gets lost in translation.",
+  },
   {
     icon: Zap,
     title: "Fast without cutting corners",
     description:
-      "MVPs in weeks, not months. I move quickly because I've done this before, not because I skip testing or docs.",
+      "MVPs in weeks, not months. We move quickly because we've done this before, not because we skip testing or docs.",
   },
   {
     icon: Shield,
     title: "Code you can hand off",
     description:
       "Typed where it matters, structured sensibly, and documented enough that the next developer isn't lost.",
-  },
-  {
-    icon: MessageSquare,
-    title: "You talk to me directly",
-    description:
-      "No account managers. I'm the one writing your code and sending you updates. Timelines are honest.",
   },
 ];
 
@@ -29,7 +29,7 @@ const WhyByteBridges = () => (
         Why ByteBridges
       </p>
       <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900">
-        Why work with me
+        Why work with us
       </h2>
     </div>
     <div className="grid md:grid-cols-3 gap-8">

@@ -5,7 +5,8 @@ import Button from "../../components/ui/Button";
 import { aboutContent } from "../../content/about";
 import { workExperience } from "../../content/experience";
 import { site, whatsappUrl } from "../../content/site";
-import { GitHubIcon, LinkedInIcon } from "../../components/ui/SocialIcons";
+import { GitHubIcon } from "../../components/ui/SocialIcons";
+import CountUp from "../../components/ui/CountUp";
 
 const About = () => (
   <>
@@ -18,12 +19,18 @@ const About = () => (
         <h2 className="font-heading font-bold text-3xl md:text-4xl text-slate-900 mb-6">
           {aboutContent.headline}
         </h2>
-        <p className="text-muted leading-relaxed mb-4">{aboutContent.intro}</p>
-        <p className="text-muted leading-relaxed mb-8">{aboutContent.story}</p>
+        <p className="text-muted leading-relaxed mb-6">{aboutContent.intro}</p>
+
+        <div className="border-l-2 border-primary pl-5 mb-8">
+          <h3 className="font-heading font-bold text-xl text-slate-900 mb-2">
+            {aboutContent.founder.title}
+          </h3>
+          <p className="text-muted leading-relaxed">{aboutContent.founder.bio}</p>
+        </div>
 
         <div className="flex flex-wrap gap-3 mb-10">
           <Button href={whatsappUrl()} external>
-            Work with me
+            Work with us
           </Button>
           <a
             href={site.social.github}
@@ -34,7 +41,7 @@ const About = () => (
             <GitHubIcon className="w-4 h-4" />
             GitHub
           </a>
-          <a
+          {/* hide linkedin for now <a
             href={site.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
@@ -43,6 +50,7 @@ const About = () => (
             <LinkedInIcon className="w-4 h-4" />
             LinkedIn
           </a>
+          */}
         </div>
       </div>
     </Section>
@@ -66,7 +74,7 @@ const About = () => (
         </div>
         <div>
           <h3 className="font-heading font-bold text-2xl text-slate-900 mb-4">
-            When projects scale
+            How we work with you
           </h3>
           <p className="text-muted leading-relaxed">{aboutContent.scaling}</p>
         </div>
@@ -75,7 +83,10 @@ const About = () => (
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-12 border-t border-slate-200">
         {aboutContent.stats.map((stat) => (
           <div key={stat.label} className="text-center">
-            <p className="font-heading font-bold text-2xl text-primary">{stat.value}</p>
+            <CountUp
+              value={stat.value}
+              className="font-heading font-bold text-2xl text-primary block"
+            />
             <p className="text-sm text-muted mt-1">{stat.label}</p>
           </div>
         ))}

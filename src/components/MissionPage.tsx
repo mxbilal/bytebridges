@@ -37,14 +37,15 @@ const MissionPage = ({ home }: { home: boolean }) => {
             <p className="text-muted text-lg leading-relaxed mb-8 animate-slow-fade-in delay-500 opacity-0 max-w-xl">
               {home ? (
                 <>
-                  I'm <strong className="text-slate-800">Bilal</strong>. I build
-                  CRM, CMS, and SaaS apps for startups and businesses. Bigger
-                  projects? I work with a small team I've used before.
+                  We're <strong className="text-slate-800">ByteBridges</strong>.
+                  We build CRM, CMS, and SaaS apps for startups and businesses,
+                  backed by a team of developers who've shipped this stuff
+                  before.
                 </>
               ) : (
                 <>
-                  I build custom web apps from Islamabad: CRMs, CMS tools, and
-                  SaaS products for startups and growing businesses.
+                  We're a full-stack team based in Islamabad, building CRMs, CMS
+                  tools, and SaaS products for startups and growing businesses.
                 </>
               )}
             </p>
@@ -72,11 +73,18 @@ const MissionPage = ({ home }: { home: boolean }) => {
           </div>
 
           <div className="w-full md:w-1/2 flex justify-center">
-            <img
-              src={home ? missionImg : ed}
-              alt={home ? "Web development illustration" : "About ByteBridges"}
-              className="w-full max-w-lg"
-            />
+            <div className="relative">
+              {/* soft floating glow behind the illustration */}
+              <div
+                className="absolute inset-0 -z-10 rounded-full bg-primary/20 blur-3xl scale-90 hero-float"
+                aria-hidden
+              />
+              <img
+                src={home ? missionImg : ed}
+                alt={home ? "Web development illustration" : "About ByteBridges"}
+                className="relative w-full max-w-lg hero-float"
+              />
+            </div>
           </div>
         </div>
       </Container>

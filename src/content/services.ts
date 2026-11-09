@@ -1,17 +1,9 @@
-import crmLogo from "../assets/crm.svg";
-import reactLogo from "../assets/react.svg";
-import storybook from "../assets/storybook.svg";
-import microServiceLogo from "../assets/micro_services.svg";
-import awsLogo from "../assets/aws.svg";
-import hostingLogo from "../assets/hosting.svg";
-import js from "../assets/js.svg";
-import backend from "../assets/backend.svg";
-import db from "../assets/db.svg";
+import type { IconName } from "../components/ui/Icon";
 
 export interface Service {
   slug: string;
   title: string;
-  image: string;
+  icon: IconName;
   description: string;
   whoFor?: string;
   deliverables?: string[];
@@ -22,7 +14,7 @@ export const services: Service[] = [
   {
     slug: "custom-applications",
     title: "Custom CRM, CMS & ERP",
-    image: crmLogo,
+    icon: "dashboard",
     description:
       "Custom apps for your business: dashboards, workflows, and admin panels so your team isn't stuck in spreadsheets.",
     whoFor: "Startups and small businesses outgrowing spreadsheets or old tools.",
@@ -32,7 +24,7 @@ export const services: Service[] = [
   {
     slug: "mvp-development",
     title: "MVP Development",
-    image: reactLogo,
+    icon: "rocket",
     description:
       "Get a working MVP out fast so you can test with real users. Built properly so you can extend it later.",
     whoFor: "Founders who need to launch soon and learn from actual usage.",
@@ -42,7 +34,7 @@ export const services: Service[] = [
   {
     slug: "responsive-design",
     title: "Responsive Web Design",
-    image: reactLogo,
+    icon: "responsive",
     description:
       "Interfaces that work on mobile, tablet, and desktop without feeling like an afterthought.",
     whoFor: "Businesses launching something new or refreshing an existing site.",
@@ -52,7 +44,7 @@ export const services: Service[] = [
   {
     slug: "ui-components",
     title: "Storybook UI Components",
-    image: storybook,
+    icon: "components",
     description:
       "A shared component library with Storybook docs so your UI stays consistent as the product grows.",
     whoFor: "Teams building more than one product or adding developers.",
@@ -62,7 +54,7 @@ export const services: Service[] = [
   {
     slug: "microservices",
     title: "Microservices Architecture",
-    image: microServiceLogo,
+    icon: "microservices",
     description:
       "Split a monolith into smaller services so you can deploy and scale parts of the system independently.",
     whoFor: "Products where one big backend is starting to slow things down.",
@@ -72,7 +64,7 @@ export const services: Service[] = [
   {
     slug: "aws-integration",
     title: "AWS Cloud Integration",
-    image: awsLogo,
+    icon: "cloud",
     description:
       "Hosting, storage, serverless, and the usual AWS setup so your app can handle real traffic.",
     whoFor: "Apps that need proper cloud infrastructure without overpaying.",
@@ -82,7 +74,7 @@ export const services: Service[] = [
   {
     slug: "api-backend",
     title: "API & Backend Development",
-    image: microServiceLogo,
+    icon: "api",
     description:
       "REST or GraphQL APIs with auth, validation, and docs that the frontend team can actually use.",
     whoFor: "Mobile apps, SPAs, or third parties that need a backend.",
@@ -92,7 +84,7 @@ export const services: Service[] = [
   {
     slug: "maintenance",
     title: "Maintenance & Retainers",
-    image: hostingLogo,
+    icon: "maintenance",
     description:
       "Bug fixes, small features, and keeping things running so you can focus on the business side.",
     whoFor: "Teams without a full-time developer who need someone reliable on call.",
@@ -101,28 +93,34 @@ export const services: Service[] = [
   },
 ];
 
-export const techStack = [
+export interface TechCategory {
+  title: string;
+  icon: IconName;
+  description: string;
+}
+
+export const techStack: TechCategory[] = [
   {
     title: "Frontend",
-    image: js,
+    icon: "frontend",
     description:
       "React, Next.js, Vue, Angular, TypeScript, Tailwind CSS, SCSS",
   },
   {
     title: "Backend",
-    image: backend,
+    icon: "backend",
     description:
       "Node.js, Express, NestJS, GraphQL, REST APIs, Microservices",
   },
   {
     title: "Database",
-    image: db,
+    icon: "database",
     description:
       "PostgreSQL, MongoDB, MySQL, Redis, Elasticsearch",
   },
   {
     title: "Deployment",
-    image: hostingLogo,
+    icon: "deploy",
     description:
       "AWS, GCP, Vercel, Docker, Jenkins, DigitalOcean",
   },

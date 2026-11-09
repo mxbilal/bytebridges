@@ -41,7 +41,7 @@ const ServicesPage = () => (
           <ServiceCard
             key={item.title}
             title={item.title}
-            image={item.image}
+            icon={item.icon}
             description={item.description}
           />
         ))}
@@ -54,11 +54,11 @@ const ServicesPage = () => (
           Not sure which service fits?
         </h2>
         <p className="text-white/80 mb-6 max-w-xl mx-auto">
-          Message me on WhatsApp and we'll figure out the right approach for your
+          Message us on WhatsApp and we'll figure out the right approach for your
           project in a quick conversation.
         </p>
         <Button
-          href={whatsappUrl("Hi Bilal, I'm not sure which service I need. Can we discuss?")}
+          href={whatsappUrl("Hi ByteBridges, I'm not sure which service I need. Can we discuss?")}
           external
           variant="secondary"
           className="!bg-white !text-primary hover:!bg-slate-100"

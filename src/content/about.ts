@@ -1,8 +1,11 @@
 export const aboutContent = {
-  headline: "I build software that actually ships",
-  intro: `I'm Muhammad Bilal. I run ByteBridges from Islamabad and have been building full-stack web apps for over 5 years. Most of my work is CRMs, CMS tools, and SaaS products for startups and small businesses.`,
-  story: `Since 2021 I've worked with React, Next.js, NestJS, Node, and Angular. Past projects include Plexaar (CRM), LYCA (audit tooling), and a few fintech apps with GraphQL. I've also built SSO flows, access control, micro-frontends, and shipped to AWS, GCP, and Vercel.`,
-  scaling: `For larger projects I bring in a few developers I trust on frontend, backend, and DevOps. You still deal with me directly. No account managers in the middle.`,
+  headline: "We build software that actually ships",
+  intro: `ByteBridges is a full-stack team based in Islamabad, building CRMs, CMS tools, and SaaS products for startups and small businesses. Since 2021 we've worked with React, Next.js, NestJS, Node, and Angular — shipping projects like Plexaar (CRM), LYCA (audit tooling), and fintech apps with GraphQL. We've built SSO flows, access control, micro-frontends, and shipped to AWS, GCP, and Vercel.`,
+  founder: {
+    title: "Led by Muhammad Bilal",
+    bio: `Bilal founded ByteBridges and leads the team on every project — from architecture decisions to client calls. 5+ years building full-stack apps, still hands-on with the code, not just managing it from a distance.`,
+  },
+  scaling: `We're a small team across frontend, backend, and DevOps. You work directly with the people building your product — founder included. No account managers in the middle.`,
   skills: [
     "React & Next.js",
     "Angular & TypeScript",
